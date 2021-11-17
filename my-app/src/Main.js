@@ -1,4 +1,6 @@
+
 import './css/main.css';
+import { useState } from "react";
 // 引入外部js component 文件
 import Car from './Car'
 
@@ -38,6 +40,7 @@ function Goal(props) {
 
 
 function Garage() {
+  // item list（这个map应该是es6的新函数）
   const cars = [
     {id: 1, brand: 'Ford'},
     {id: 2, brand: 'BMW'},
@@ -51,6 +54,63 @@ function Garage() {
       </ul>
     </>
   );
+}
+function MyForm() {
+  // const [name, setName] = useState("");
+  const [inputs, setInputs] = useState({});
+  const [textarea, setTextarea] = useState("this is a textarea");
+  const [myCar, setMyCar] = useState("Volvo");
+
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   // w3cschool 有个错误, 在es6中必须使用反引号才能用${}
+  //   alert(`The name you entered was: ${name}`);
+  // }
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({ ...values, [name]: value }))
+    setTextarea(event.target.value)
+    setMyCar(event.target.value)
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(inputs);
+    alert(inputs.username + inputs.age);
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>Enter your name:
+        <input 
+          type="text"
+          name="username"
+          value={inputs.username || ""}
+          onChange={handleChange}
+          // onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+      <label>Enter your age:
+        <input 
+          type="number"
+          name="age"
+          value={inputs.age || ""}
+          onChange={handleChange}
+          // onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+      <textarea value={textarea} onChange={handleChange} />
+      <select value={myCar} onChange={handleChange}>
+        <option value="Ford">Ford</option>
+        <option value="Volvo">Volvo</option>
+        <option value="Fiat">Fiat</option>
+      </select>
+      <input type="submit" />
+      {/* <p>{ name }</p> */}
+    </form>
+  )
 }
 
 function App(props) {
@@ -81,6 +141,7 @@ function App(props) {
             <button onClick={(event) => doubleShoot("Goal!", event)}>take the next shot!</button>
             <Goal isGoal={true} />
             <Garage />
+            <MyForm />
         </div>
       </main>
       <footer className="App-footer">
