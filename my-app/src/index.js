@@ -2,14 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Main from './Main';
-import App from './App'
+// import App from './App'
 import reportWebVitals from './reportWebVitals';
-import Cat from './CarClass'
 //  react-router-dom v6 switch to routes
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
-import Blogs from "./pages/Blogs";
-import Contact from "./pages/Contact";
+
 // 该ReactDOM.render()函数接受两个参数，HTML 代码和一个 HTML 元素。
 // 该函数的目的是在指定的 HTML 元素内显示指定的 HTML 代码。
 // 在你的 React 项目的根目录下还有另一个文件夹，名为“public”。在这个文件夹中，有一个index.html文件。
@@ -19,45 +15,14 @@ ReactDOM.render(
     {/* <Main />是一大块JSX Component, id是自定义id，用于在html页面调用 */}
     {/* color = "red" 是一个 props */}
     <Main color="red" name="props" />
-    <Cat model="MUSTANG"/>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
 // 可以通过这种形式给网页分层次(也可以写在一起)
-ReactDOM.render(<App />, document.getElementById('app'));
+// jsx 语法
+// ReactDOM.render(<App />, document.getElementById('app'));
 
-function RouterTest() {
-  return (
-    <Router>
-      <div>
-        <Link to="/">Home</Link>
-      </div>
-      <div>
-        <Link to="/blogs">Blog Articles</Link>
-      </div>
-      <div>
-        <Link to="/contact">Contact Me</Link>
-      </div>
-
-      <hr />
-
-      <Routes>
-        <Route exact path="/" element={ <Home />}>
-          {/* <Home /> */}
-        </Route>
-        <Route path="/blogs" element={<Blogs />}>
-          {/* <Blogs /> */}
-        </Route>
-        <Route path="/contact" element={ <Contact />}>
-          {/* <Contact /> */}
-        </Route>
-      </Routes>
-    </Router>
-  );
-}
-
-ReactDOM.render(<RouterTest />, document.getElementById("RouterTest"));
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

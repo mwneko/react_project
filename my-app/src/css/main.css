@@ -24,6 +24,15 @@
     font-size: calc(10px + 2vmin);
     color: rgb(0, 0, 0);
 }
+.App-header link{
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+.App-header link:hover {
+    background-color: yellow;
+    color:black;
+}
 
 .App-footer {
     display: flex;
@@ -32,4 +41,17 @@
     align-items: center;
     justify-content: center;
     min-height: 5vh;
+}
+
+.menu{
+    margin: 10px;
+}
+.link{
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+}
+.link:hover{
+    background-color: blanchedalmond;
+    color: black ;
 }
