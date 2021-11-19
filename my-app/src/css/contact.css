@@ -1,0 +1,35 @@
+.ContactForm{
+    font-size: larger;
+    background-color: cadetblue;
+    min-height: 200px;
+    text-align:left;
+    padding:20px;
+    margin-bottom: 30px;
+    width: 300px;
+}
+
+.ContactForm input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+}
+.ContactForm textarea{
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    height: 200px;
+    width: 100%;
+}
+.ContactForm button{
+    width: 100%;
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+}
+.ContactForm button:hover{
+    background-color: chartreuse;
+    color: cornsilk;
+}
