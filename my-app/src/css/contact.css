@@ -1,11 +1,11 @@
 .ContactForm{
-    font-size: larger;
     background-color: cadetblue;
     min-height: 200px;
     text-align:left;
     padding:20px;
-    margin-bottom: 30px;
+    margin: auto 0;
     width: 300px;
+    border-radius: 5px;
 }
 
 .ContactForm input{
@@ -24,7 +24,8 @@
     width: 100%;
 }
 .ContactForm button{
-    width: 100%;
+    margin-top: 10px;
+    width: 305px;
     border: none;
     height: 30px;
     border-radius: 5px;
