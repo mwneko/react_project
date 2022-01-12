@@ -8,9 +8,14 @@
 }
 .item{
     background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 20px;
-    font-size: 30px;
+    text-align: left;
+    padding: 10px;
+}
+.item .title{
+    font-size: 30px
+}
+.item p{
+    font-size: 10px;
 }
 
 .item1 {

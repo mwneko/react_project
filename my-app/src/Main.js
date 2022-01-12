@@ -31,7 +31,7 @@ function App() {
             </main>
           </Router>
       <footer className="App-footer">
-        copyright@Qiaochu Wang
+        copyright@Jessie Wang
       </footer>
     </div>
   );

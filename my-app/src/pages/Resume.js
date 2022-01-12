@@ -5,19 +5,19 @@ const Resume = () => {
     <hr></hr>
     <div className="container">
       <div className="item item1">
-          <p> personal information</p>
+          <p className="title"> personal information</p>
       </div>
       <div className="item item2">
         <div className="item">
-          <p>summary</p>
+          <p className="title">summary</p>
           <hr></hr>
         </div>
         <div className="item">
-          <p>Key skills</p>
+          <p className="title">Key skills</p>
           <hr></hr>
         </div>
         <div className="item">
-          <p>Education</p>
+          <p className="title">Education</p>
           <hr></hr>
           <p>ajskhdkjasdhkasjd</p>
           <p>ajskhdkjasdhkasjdhaskjdhasjksadasdasdasdasdassadasdas</p>
@@ -28,7 +28,7 @@ const Resume = () => {
       </div>
       <div className="item item3">
         <div className="item">
-          <p>career history</p>
+          <p className="title">career history</p>
           <hr></hr>
           <p>
             Front-end Developer | Personal Business Project
